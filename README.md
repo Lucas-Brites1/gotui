@@ -15,7 +15,7 @@
 To install GoTUI, use `go get`:
 
 ```bash
-go get github.com/Lucas-Brites1/gotui
+go get github.com/Lucas-Brites1/gotui/terminal
 ```
 
 ## Usage
@@ -27,19 +27,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/Lucas-Brites1/gotui"
+	"github.com/Lucas-Brites1/gotui/terminal"
 )
 
 func main() {
 	t := gotui.Terminal{}
 
-	subOptions := &[]gotui.Option{
-		gotui.CreateOption("Option 1", func() { fmt.Println("Action for Option 1") }, nil),
-		gotui.CreateOption("Option 2", func() { fmt.Println("Action for Option 2") }, nil),
+	subOptions := &[]terminal.Option{
+		terminal.CreateOption("Option 1", func() { fmt.Println("Action for Option 1") }, nil),
+		terminal.CreateOption("Option 2", func() { fmt.Println("Action for Option 2") }, nil),
 	}
 
-	options := []gotui.Option{
-		gotui.CreateOption("Main Menu", nil, subOptions),
+	options := []terminal.Option{
+		terminal.CreateOption("Main Menu", nil, subOptions),
 	}
 
 	t.Start(options).HandleKeys()
