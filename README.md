@@ -62,6 +62,4 @@ func main() {
 - **Backspace**: Return to the previous menu
 - **Esc**: Exit the program
 
-## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
